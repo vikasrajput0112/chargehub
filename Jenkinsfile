@@ -4,12 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Validate') {
             steps {
                 echo 'Validating ChargeHub website...'
@@ -26,17 +20,25 @@ pipeline {
             }
         }
 
-stage('Deploy to Nginx') {
-    steps {
-        echo 'Deploying ChargeHub website to Nginx...'
+        stage('Deploy to Nginx') {
+            steps {
+                echo 'Deploying ChargeHub website to Nginx...'
 
-        sh '''
-            rm -rf /var/www/chargehub/*
-            cp -r . /var/www/chargehub/
-        '''
-    }
-}
+                sh '''
+                    rm -rf /var/www/chargehub/*
 
+                    cp -r index.html \
+                          products.html \
+                          product-details.html \
+                          about.html \
+                          contact.html \
+                          css \
+                          js \
+                          images \
+                          /var/www/chargehub/
+                '''
+            }
+        }
     }
 
     post {
