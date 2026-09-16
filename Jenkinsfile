@@ -26,17 +26,16 @@ pipeline {
             }
         }
 
-        stage('Deploy to Nginx') {
-            steps {
-                echo 'Deploying ChargeHub website to Nginx...'
+stage('Deploy to Nginx') {
+    steps {
+        echo 'Deploying ChargeHub website to Nginx...'
 
-                sh '''
-                    sudo rm -rf /var/www/chargehub/*
-                    sudo cp -r . /var/www/chargehub/
-                    sudo chown -R www-data:www-data /var/www/chargehub
-                '''
-            }
-        }
+        sh '''
+            rm -rf /var/www/chargehub/*
+            cp -r . /var/www/chargehub/
+        '''
+    }
+}
 
     }
 
