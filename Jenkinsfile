@@ -34,7 +34,6 @@ pipeline {
                           contact.html \
                           css \
                           js \
-                          images \
                           /var/www/chargehub/
                 '''
             }
