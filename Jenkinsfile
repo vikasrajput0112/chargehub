@@ -20,6 +20,30 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+            steps {
+                echo 'Running SonarQube analysis...'
+
+                script {
+
+                    def scannerHome = tool 'SonarScanner'
+
+                    withSonarQubeEnv('SonarQube') {
+
+                        sh """
+                            ${scannerHome}/bin/sonar-scanner \
+                              -Dsonar.projectKey=chargehub \
+                              -Dsonar.projectName=ChargeHub \
+                              -Dsonar.sources=. \
+                              -Dsonar.exclusions=.git/**,README.md,Jenkinsfile \
+                              -Dsonar.sourceEncoding=UTF-8 \
+                              -Dsonar.token=\\\$SONAR_AUTH_TOKEN
+                        """
+                    }
+                }
+            }
+        }
+
         stage('Deploy to Nginx') {
             steps {
                 echo 'Deploying ChargeHub website to Nginx...'
