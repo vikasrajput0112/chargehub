@@ -39,7 +39,7 @@ stage('SonarQube Analysis') {
 
                     sh """
                         ${scannerHome}/bin/sonar-scanner \
-                          -Dsonar.projectKey=chargehub \
+                          -Dsonar.projectKey=Chargehub \
                           -Dsonar.projectName=ChargeHub \
                           -Dsonar.sources=. \
                           -Dsonar.exclusions=.git/**,README.md,Jenkinsfile \
