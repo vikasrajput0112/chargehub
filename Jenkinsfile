@@ -20,29 +20,37 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                echo 'Running SonarQube analysis...'
+stage('SonarQube Analysis') {
+    steps {
+        echo 'Running SonarQube analysis...'
 
-                script {
+        script {
 
-                    def scannerHome = tool 'SonarScanner'
+            def scannerHome = tool 'SonarScanner'
 
-                    withSonarQubeEnv('SonarQube') {
+            withSonarQubeEnv('SonarQube') {
 
-                        sh """
-                            ${scannerHome}/bin/sonar-scanner \
-                              -Dsonar.projectKey=chargehub \
-                              -Dsonar.projectName=ChargeHub \
-                              -Dsonar.sources=. \
-                              -Dsonar.exclusions=.git/**,README.md,Jenkinsfile \
-                              -Dsonar.sourceEncoding=UTF-8 \
-                              -Dsonar.token=\\\$SONAR_AUTH_TOKEN
-                        """
-                    }
+                withCredentials([
+                    string(
+                        credentialsId: 'sonar-token',
+                        variable: 'SONAR_TOKEN'
+                    )
+                ]) {
+
+                    sh """
+                        ${scannerHome}/bin/sonar-scanner \
+                          -Dsonar.projectKey=chargehub \
+                          -Dsonar.projectName=ChargeHub \
+                          -Dsonar.sources=. \
+                          -Dsonar.exclusions=.git/**,README.md,Jenkinsfile \
+                          -Dsonar.sourceEncoding=UTF-8 \
+                          -Dsonar.token=\${SONAR_TOKEN}
+                    """
                 }
             }
         }
+    }
+}
 
         stage('Deploy to Nginx') {
             steps {
