@@ -52,20 +52,27 @@ stage('Deploy to Nginx') {
         echo 'Deploying ChargeHub website to Nginx...'
 
         sh '''
-            rm -rf /var/www/chargehub/*
-            
-            cp index.html /var/www/chargehub/
-            cp products.html /var/www/chargehub/
-            cp product-details.html /var/www/chargehub/
-            cp about.html /var/www/chargehub/
-            cp contact.html /var/www/chargehub/
-            cp faq.html /var/www/chargehub/
-            cp offers.html /var/www/chargehub/
+            echo "Cleaning old ChargeHub website files..."
 
+            rm -rf /var/www/chargehub/about.html
+            rm -rf /var/www/chargehub/contact.html
+            rm -rf /var/www/chargehub/faq.html
+            rm -rf /var/www/chargehub/offers.html
+            rm -rf /var/www/chargehub/product-details.html
+            rm -rf /var/www/chargehub/products.html
+
+            rm -rf /var/www/chargehub/css
+            rm -rf /var/www/chargehub/js
+
+            rm -f /var/www/chargehub/index.html
+
+            echo "Copying new one-page website..."
+
+            cp index.html /var/www/chargehub/
             cp -r css /var/www/chargehub/
             cp -r js /var/www/chargehub/
 
-            chown -R jenkins:jenkins /var/www/chargehub
+            echo "ChargeHub website deployed successfully."
         '''
     }
 }
