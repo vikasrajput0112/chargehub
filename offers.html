@@ -1,233 +1,326 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Special Offers - ChargeHub</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Offers - ChargeHub</title>
 
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        .offers-container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 20px;
-        }
-
-        .offers-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .offers-header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .offers-header p {
-            color: #666;
-            font-size: 17px;
-        }
-
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .offer-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-            background: #fff;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .offer-card h2 {
-            margin-bottom: 15px;
-        }
-
-        .offer-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .offer-price {
-            font-size: 28px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .offer-button {
-            display: inline-block;
-            padding: 12px 22px;
-            border-radius: 6px;
-            text-decoration: none;
-            background: #222;
-            color: white;
-            cursor: pointer;
-        }
-
-        .offer-button:hover {
-            opacity: 0.85;
-        }
-
-        .offer-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 20px;
-            background: #eee;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-
-            .offers-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-    </style>
 
 </head>
 
 
 <body>
 
-    <!-- Navigation -->
-    <header>
 
-        <nav>
+<header>
 
-            <a href="index.html">Home</a>
+    <nav class="navbar">
 
-            <a href="products.html">Products</a>
-
-            <a href="product-details.html">Product Details</a>
-
-            <a href="offers.html">Offers</a>
-
-            <a href="about.html">About</a>
-
-            <a href="faq.html">FAQ</a>
-
-            <a href="contact.html">Contact</a>
-
-        </nav>
-
-    </header>
+        <div class="logo">
+            Charge<span>Hub</span>
+        </div>
 
 
-    <!-- Offers -->
-    <main class="offers-container">
+        <ul class="nav-links">
 
-        <section class="offers-header">
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
 
-            <h1>Special Offers</h1>
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
 
-            <p>
-                Save more on your favorite ChargeHub charging accessories.
+            <li>
+                <a href="product-details.html">
+                    Product Details
+                </a>
+            </li>
+
+            <li>
+                <a href="offers.html"
+                   class="active">
+                    Offers
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <p>SPECIAL DEALS</p>
+
+    <h1>Exclusive Offers</h1>
+
+    <p>
+        Save more on your favourite charging accessories.
+    </p>
+
+</section>
+
+
+<section class="offers-section">
+
+    <div class="section-title">
+
+        <p>LIMITED TIME OFFERS</p>
+
+        <h2>Choose Your Discount</h2>
+
+    </div>
+
+
+    <div class="offers-grid">
+
+
+        <!-- 5% OFFER -->
+
+        <div class="offer-card">
+
+            <div class="offer-icon">
+                ⚡
+            </div>
+
+            <p class="offer-label">
+                STARTER OFFER
             </p>
 
-        </section>
+            <h2>5% OFF</h2>
 
+            <p>
+                Get 5% discount on your
+                charging accessories.
+            </p>
 
-        <section class="offers-grid">
+            <div class="coupon-box">
 
-
-            <!-- Offer 1 -->
-
-            <article class="offer-card">
-
-                <span class="offer-badge">
-                    BEST VALUE
+                <span id="coupon5">
+                    CHARGE5
                 </span>
 
-                <h2>Fast Charging Cable</h2>
+                <button
+                    class="copy-btn"
+                    onclick="copyCoupon('CHARGE5', this)">
+                    Copy Code
+                </button>
 
-                <p>
-                    Durable fast-charging cable suitable for everyday
-                    smartphone charging.
-                </p>
+            </div>
 
-                <div class="offer-price">
-                    ₹299
-                </div>
+            <small>
+                Use code at checkout
+            </small>
 
-                <a
-                    href="product-details.html"
-                    class="offer-button">
-                    View Product
-                </a>
-
-            </article>
+        </div>
 
 
-            <!-- Offer 2 -->
+        <!-- 10% OFFER -->
 
-            <article class="offer-card">
+        <div class="offer-card featured-offer">
 
-                <span class="offer-badge">
-                    LIMITED OFFER
+            <div class="popular-badge">
+                MOST POPULAR
+            </div>
+
+            <div class="offer-icon">
+                🔋
+            </div>
+
+            <p class="offer-label">
+                SMART SAVER
+            </p>
+
+            <h2>10% OFF</h2>
+
+            <p>
+                Save 10% when you shop
+                selected ChargeHub products.
+            </p>
+
+            <div class="coupon-box">
+
+                <span id="coupon10">
+                    CHARGE10
                 </span>
 
-                <h2>65W Fast Charger</h2>
+                <button
+                    class="copy-btn"
+                    onclick="copyCoupon('CHARGE10', this)">
+                    Copy Code
+                </button>
 
-                <p>
-                    Powerful charger designed for smartphones,
-                    tablets and compatible devices.
-                </p>
+            </div>
 
-                <div class="offer-price">
-                    ₹999
-                </div>
+            <small>
+                Use code at checkout
+            </small>
 
-                <a
-                    href="product-details.html"
-                    class="offer-button">
-                    View Product
-                </a>
-
-            </article>
+        </div>
 
 
-            <!-- Offer 3 -->
+        <!-- 15% OFFER -->
 
-            <article class="offer-card">
+        <div class="offer-card">
 
-                <span class="offer-badge">
-                    POPULAR
+            <div class="offer-icon">
+                🚀
+            </div>
+
+            <p class="offer-label">
+                POWER DEAL
+            </p>
+
+            <h2>15% OFF</h2>
+
+            <p>
+                Get our biggest discount
+                on eligible purchases.
+            </p>
+
+            <div class="coupon-box">
+
+                <span id="coupon15">
+                    CHARGE15
                 </span>
 
-                <h2>Power Bank</h2>
+                <button
+                    class="copy-btn"
+                    onclick="copyCoupon('CHARGE15', this)">
+                    Copy Code
+                </button>
 
-                <p>
-                    Portable power bank for keeping your devices
-                    charged while travelling.
-                </p>
+            </div>
 
-                <div class="offer-price">
-                    ₹1,299
-                </div>
+            <small>
+                Use code at checkout
+            </small>
 
-                <a
-                    href="product-details.html"
-                    class="offer-button">
-                    View Product
-                </a>
-
-            </article>
+        </div>
 
 
-        </section>
+    </div>
 
-    </main>
+</section>
 
+
+<section class="cta">
+
+    <h2>Ready to Save?</h2>
+
+    <p>
+        Explore our charging accessories and use
+        your favourite offer.
+    </p>
+
+    <a href="products.html"
+       class="btn">
+        Shop Now
+    </a>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h2>ChargeHub</h2>
+
+            <p>
+                Your trusted destination for mobile
+                charging accessories.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="offers.html">
+                Offers
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>
+                support@chargehub.com
+            </p>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 ChargeHub. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
 
 </body>
 
 </html>
+```
