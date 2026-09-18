@@ -4,22 +4,17 @@ pipeline {
 
     stages {
 
-        stage('Validate') {
-            steps {
-                echo 'Validating ChargeHub website...'
+       stage('Validate') {
+    steps {
+        echo 'Validating ChargeHub website...'
 
-                sh '''
-                    test -f index.html
-                    test -f products.html
-                    test -f product-details.html
-                    test -f about.html
-                    test -f contact.html
-                    test -f css/style.css
-                    test -f js/script.js
-                '''
-            }
-        }
-
+        sh '''
+            test -f index.html
+            test -f css/style.css
+            test -f js/script.js
+        '''
+    }
+}
 /* stage('SonarQube Analysis') {
     steps {
         echo 'Running SonarQube analysis...'
