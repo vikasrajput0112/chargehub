@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAQ - ChargeHub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .faq-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .faq-header p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 18px 20px;
+            border: none;
+            background: #f5f5f5;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .faq-question:hover {
+            background: #eaeaea;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 18px 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="product-details.html">Product Details</a>
+            <a href="offers.html">Offers</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- FAQ Section -->
+    <main class="faq-container">
+
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+
+            <p>
+                Find answers to common questions about ChargeHub
+                products, orders and delivery.
+            </p>
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                What products does ChargeHub sell?
+            </button>
+
+            <div class="faq-answer">
+                ChargeHub provides mobile charging accessories including
+                charging cables, adapters, chargers, power banks and other
+                mobile accessories.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                How can I place an order?
+            </button>
+
+            <div class="faq-answer">
+                Browse our products, select the product you want and
+                follow the ordering instructions provided on the website.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                How long does delivery take?
+            </button>
+
+            <div class="faq-answer">
+                Standard delivery usually takes a few business days.
+                Delivery time may vary depending on your location.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Can I return a product?
+            </button>
+
+            <div class="faq-answer">
+                Yes. Products may be eligible for return depending on
+                the applicable return policy and product condition.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Are ChargeHub charging cables compatible with all phones?
+            </button>
+
+            <div class="faq-answer">
+                Compatibility depends on the connector type and device.
+                Please check the product details before purchasing.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                How can I contact ChargeHub support?
+            </button>
+
+            <div class="faq-answer">
+                You can contact our support team through the Contact page.
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script>
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                const answer = this.nextElementSibling;
+
+                answer.classList.toggle("active");
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
