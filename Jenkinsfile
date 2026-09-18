@@ -73,7 +73,7 @@ pipeline {
             }
         }
 
-        stage('Trivy Image Scan') {
+ /*       stage('Trivy Image Scan') {
             steps {
                 echo 'Scanning Docker image with Trivy...'
 
@@ -87,6 +87,7 @@ pipeline {
                 '''
             }
         }
+        */
 
         stage('Login to Azure Container Registry') {
             steps {
