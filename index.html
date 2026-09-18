@@ -1,1 +1,682 @@
-.
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ChargeHub - Mobile Chargers</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER / NAVIGATION
+========================================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Charge<span>Hub</span>
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#products">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#offers">
+                    Offers
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            POWER YOUR EVERYDAY
+        </p>
+
+
+        <h1>
+            Fast Charging.
+            <br>
+            <span>Smart Accessories.</span>
+        </h1>
+
+
+        <p class="hero-description">
+
+            Discover reliable mobile chargers and
+            charging accessories designed for your
+            everyday needs.
+
+        </p>
+
+
+        <a href="#products" class="btn">
+            Shop Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FEATURES SECTION
+========================================= -->
+
+<section class="features">
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            ⚡
+        </div>
+
+        <h3>
+            Fast Charging
+        </h3>
+
+        <p>
+            Charge your devices quickly and efficiently.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🛡️
+        </div>
+
+        <h3>
+            Safe & Reliable
+        </h3>
+
+        <p>
+            Quality charging accessories with
+            multiple safety features.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🚚
+        </div>
+
+        <h3>
+            Fast Delivery
+        </h3>
+
+        <p>
+            Get your charging accessories
+            delivered quickly.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     PRODUCTS SECTION
+========================================= -->
+
+<section class="products" id="products">
+
+
+    <div class="section-title">
+
+        <p>
+            OUR PRODUCTS
+        </p>
+
+        <h2>
+            Charging Accessories
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                ⚡
+            </div>
+
+            <h3>
+                65W Fast Charger
+            </h3>
+
+            <p>
+                USB-C Power Delivery Fast Charger
+            </p>
+
+            <strong>
+                ₹1,299
+            </strong>
+
+            <button
+                class="product-btn"
+                onclick="buyProduct('65W Fast Charger')">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🔌
+            </div>
+
+            <h3>
+                USB-C Cable
+            </h3>
+
+            <p>
+                100W Nylon Braided Charging Cable
+            </p>
+
+            <strong>
+                ₹499
+            </strong>
+
+            <button
+                class="product-btn"
+                onclick="buyProduct('USB-C Cable')">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🔋
+            </div>
+
+            <h3>
+                Power Bank
+            </h3>
+
+            <p>
+                20,000mAh Fast Charging Power Bank
+            </p>
+
+            <strong>
+                ₹1,799
+            </strong>
+
+            <button
+                class="product-btn"
+                onclick="buyProduct('Power Bank')">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                📱
+            </div>
+
+            <h3>
+                Wireless Charger
+            </h3>
+
+            <p>
+                15W Wireless Fast Charger
+            </p>
+
+            <strong>
+                ₹999
+            </strong>
+
+            <button
+                class="product-btn"
+                onclick="buyProduct('Wireless Charger')">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     OFFERS SECTION
+========================================= -->
+
+<section class="offers" id="offers">
+
+
+    <div class="section-title">
+
+        <p>
+            SPECIAL OFFERS
+        </p>
+
+        <h2>
+            Save More With ChargeHub
+        </h2>
+
+    </div>
+
+
+    <div class="offer-grid">
+
+
+        <!-- 5% OFFER -->
+
+        <div class="offer-card">
+
+            <div class="offer-icon">
+                ⚡
+            </div>
+
+            <p class="offer-label">
+                STARTER OFFER
+            </p>
+
+            <h3>
+                5% OFF
+            </h3>
+
+            <p>
+                Get 5% discount on eligible purchases.
+            </p>
+
+
+            <div class="coupon">
+
+                <span>
+                    CHARGE5
+                </span>
+
+                <button
+                    onclick="copyCoupon('CHARGE5', this)">
+
+                    Copy Code
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10% OFFER -->
+
+        <div class="offer-card featured-offer">
+
+            <div class="popular">
+                MOST POPULAR
+            </div>
+
+
+            <div class="offer-icon">
+                🔋
+            </div>
+
+            <p class="offer-label">
+                SMART SAVER
+            </p>
+
+            <h3>
+                10% OFF
+            </h3>
+
+            <p>
+                Save 10% on selected ChargeHub products.
+            </p>
+
+
+            <div class="coupon">
+
+                <span>
+                    CHARGE10
+                </span>
+
+                <button
+                    onclick="copyCoupon('CHARGE10', this)">
+
+                    Copy Code
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 15% OFFER -->
+
+        <div class="offer-card">
+
+            <div class="offer-icon">
+                🚀
+            </div>
+
+            <p class="offer-label">
+                POWER DEAL
+            </p>
+
+            <h3>
+                15% OFF
+            </h3>
+
+            <p>
+                Get our biggest discount on
+                eligible purchases.
+            </p>
+
+
+            <div class="coupon">
+
+                <span>
+                    CHARGE15
+                </span>
+
+                <button
+                    onclick="copyCoupon('CHARGE15', this)">
+
+                    Copy Code
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     WHY CHOOSE US
+========================================= -->
+
+<section class="why-us">
+
+
+    <div class="section-title">
+
+        <p>
+            WHY CHOOSE US
+        </p>
+
+        <h2>
+            Built Around Your Needs
+        </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <h3>
+                Quality Products
+            </h3>
+
+            <p>
+                We focus on reliable charging
+                accessories designed for everyday use.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                Affordable Pricing
+            </h3>
+
+            <p>
+                Practical products at competitive
+                and affordable prices.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                Customer Support
+            </h3>
+
+            <p>
+                Our team is available to help with
+                your product-related questions.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT SECTION
+========================================= -->
+
+<section class="contact" id="contact">
+
+
+    <div class="contact-content">
+
+
+        <div>
+
+            <p class="small-title">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Have a Question?
+            </h2>
+
+            <p>
+                Contact ChargeHub for product
+                questions, support or general enquiries.
+            </p>
+
+        </div>
+
+
+        <div class="contact-info">
+
+            <p>
+                📧 support@chargehub.com
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                📍 New Delhi, India
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h2>
+                ChargeHub
+            </h2>
+
+            <p>
+                Your trusted destination for
+                mobile charging accessories.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#products">
+                Products
+            </a>
+
+            <a href="#offers">
+                Offers
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                support@chargehub.com
+            </p>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 ChargeHub.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
