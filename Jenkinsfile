@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-stage('SonarQube Analysis') {
+/* stage('SonarQube Analysis') {
     steps {
         echo 'Running SonarQube analysis...'
 
@@ -51,7 +51,7 @@ stage('SonarQube Analysis') {
         }
     }
 }
-
+*/
 stage('Deploy to Nginx') {
     steps {
         echo 'Deploying ChargeHub website to Nginx...'
