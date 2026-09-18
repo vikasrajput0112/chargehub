@@ -68,8 +68,19 @@ stage('Deploy to Nginx') {
 
             echo "Copying new one-page website..."
 
+            echo "Copying ChargeHub website..."
+
+
+
+            
+
             cp index.html /var/www/chargehub/
+            cp index.html /var/www/chargehub/
+            cp Laptop-Charger.html /var/www/chargehub/
             cp -r css /var/www/chargehub/
+            cp -r css /var/www/chargehub/
+            cp -r js /var/www/chargehub/
+
             cp -r js /var/www/chargehub/
 
             echo "ChargeHub website deployed successfully."
